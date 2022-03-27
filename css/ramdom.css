@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Lobster&family=PT+Sans+Narrow:wght@400;700&family=Poppins:wght@200;300;400&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+/* color code  */
+:root{
+    --cyan:#f6f7f7;
+    --black:#1c1c1c;
+    --white:#fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all .2s linear;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+html{
+    font-size: 65.5%;
+}
+
+/* grid layouts */
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    /* border:.1rem solid #ccc; */
+  }
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.heading h2{
+    text-align: center;
+    font-size: 4rem;
+    padding: 4rem 0;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 2rem;
+}
+.btn {
+    padding: 1.2rem 5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    background: white;
+    border: .1rem solid #000;
+    cursor: pointer;
+    transition: .5s;
+  }
+  .btn:hover{
+      background: var(--black);
+      color: var(--white);
+  }
+  .mt-5{
+      margin-top: 10rem;
+  }
+/* header part start here  */
+header{
+    background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)) ,url(../img/background.jpg)no-repeat center top;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+}
+header nav{
+    padding: 1rem 0;
+    margin: 3rem 0;
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+}
+header nav .logo{
+    width: 30rem;
+    padding: 1rem 0;
+}
+header nav .menu_items{
+    text-align: right;
+    margin-top: 2rem;
+}
+header nav .menu_items a{
+    font-size: 2rem;
+    color: var(--white);
+    margin-right: 3rem;
+}
+.navWrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#bars {
+    font-size: 3rem;
+    margin-top: .8rem;
+    margin-right: 1rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+  #MenuClose{
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    font-size: 5rem;
+    color: var(--white);
+    cursor: pointer;
+    display: none;
+}
+/* hero part start here  */
+.hero .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 1240px;
+    width: 100%;
+    text-align: center;
+    /* border: .2rem solid #fff; */
+    padding: 1rem;
+}
+
+.hero .content h2{
+    font-size: 8rem;
+    text-transform: none;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.hero .content h5{
+    font-size: 3rem;
+    text-transform: none;
+    color: var(--white);
+    line-height: 1.8;
+}
+
+/* about part start here  */
+#about{
+    padding: 4rem 0;
+}
+.heading h2{
+    text-align: center;
+    font-size: 4rem;
+    padding: 4rem 0;
+    font-family: 'Roboto', sans-serif;
+}
+#about .about_img,
+#about .about_info{
+    height: 60rem;
+}
+#about .about_img img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    padding: 0 2rem;
+}
+#about .about_info{
+    padding: 1rem 3rem; 
+}
+.about_info h2 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+  }
+  .about_info p {
+    font-size: 1.6rem;
+    padding: 1.5rem 0;
+    line-height: 2;
+  }
+  .progressBar{
+      margin-top: 2rem;
+  }
+  
+.about_info .buttons {
+    margin-top: 5rem;
+  }
+  .about_info .buttons .btn-cv {
+   margin-left: 1rem;
+  }
+
+  /* offer part start here  */
+  #offer{
+      padding: 3rem 0 5rem;
+      margin-bottom: 3rem;
+  }
+  .offer_container{
+      margin-top: 2rem;
+  }
+
+#offer .offer_box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#offer .offer_box .icon{
+    padding: 3rem;
+    background: #eaeaea;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+}
+#offer .offer_box .icon i{
+    font-size: 3rem;
+}
+#offer .offer_box .offer_text{
+    margin-left: 1rem;
+}
+#offer .offer_box .offer_text h3{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+#offer .offer_box .offer_text p{
+    font-size: 1.6rem;
+    color: #333;
+    width: 80%;
+    line-height: 1.6;
+    padding: 1rem 0;
+}
+
+/* feateured part start her  */
+
+
+.gallery a{
+    position: relative;
+}
+.gallery a .info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    color: #fff;
+    transform: rotateY(90deg);
+    transition: .8s;
+}
+.gallery a:hover .info{
+    transform: rotateY(0deg);
+}
+.filter a {
+    padding: 10px 20px;
+    display: inline-block;
+    color: #003;
+    background: #eee;
+    text-decoration: none;
+    transition: all 0.2s;
+    border-radius: 9px;
+    font-size: 2.5rem;
+    margin: 0 2rem;
+  }
+  
+  .filter a:hover { background: #8ad }
+  
+  .filter {
+    padding: 50px;
+    text-align: center
+  }
+  
+  .gallery a img {
+    width: 100%;
+    height: auto;
+    float: left;
+  }
+  
+  .gallery a {
+    width: 33.33%;
+    transition: all 0.2s;
+    display: block;
+    float: left;
+    opacity: 1;
+    height: auto;
+  }
+  
+  .gallery .hide, .gallery .pophide {
+    width: 0%;
+    opacity: 0;
+    transition: all 0.1s;
+  }
+  .gallery .hide, .gallery .pophide a{
+      height: 50rem;
+      width: 50rem;
+  }
+  
+  .gallery .pop {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 0px 400px rgba(0,0,0,0.5);
+    height: 63rem;
+    width: 100rem;
+  }
+  
+  
